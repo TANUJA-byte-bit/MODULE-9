@@ -1,12 +1,12 @@
-# Matrix Operations-Diagonal Matrix Elements Printer 🧮
+# 9c)  Matrix Operations-Diagonal Matrix Elements Printer 
 
 This Python program reads a matrix of any size from the user and prints **only the diagonal elements**, leaving other elements blank in the output.
 
-## 📌 Aim
+##  Aim
 
 To write a Python program that prints only the diagonal elements of a given matrix.
 
-## 🧠 Algorithm
+##  Algorithm
 
 1. Read the number of rows and columns from the user.
 2. Initialize an empty matrix of size `rows × columns`.
@@ -17,9 +17,27 @@ To write a Python program that prints only the diagonal elements of a given matr
    - Else, print a blank space.
 6. Print a newline after each row.
 
-## 🖥️ Program
-Add Code Here
+##  Program
+```
+rows=int(input())
+columns=int(input())
+matrix=[[0]*columns for row in range(rows)]
+for i in range(rows):
+    lines=list(map(int, input().split()))
+    for j in range(columns):
+        matrix[i][j]=lines[j]
+print(matrix)
+for i in range(rows):
+    for j in range(columns):
+        if(i==j):
+            print(matrix[i][j],end=" ")
+        else:
+            print(' ',end=" ")
+    print()
+```
 
 ### Output:
+<img width="841" height="355" alt="image" src="https://github.com/user-attachments/assets/694c1327-17dd-442d-abde-3f02c774c51f" />
 
 ## Result
+Program executed Successfully.
